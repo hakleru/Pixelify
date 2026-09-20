@@ -19,6 +19,12 @@ jobs:
         distribution: 'temurin'
         java-version: '11'
 
+    - name: Install Android SDK Components (CMake & NDK)
+      uses: android-actions/setup-android@v3
+      with:
+        cmake-version: '3.22.1'
+        android-gradle-version: '7.0.2'
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
