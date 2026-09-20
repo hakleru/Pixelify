@@ -13,16 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup JDK 17
+    - name: Setup JDK 11
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17'
-
-    - name: Install Android SDK CMake
-      uses: android-actions/setup-android@v3
-      with:
-        cmake-version: '3.22.1'
+        java-version: '11'
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
