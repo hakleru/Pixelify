@@ -23,7 +23,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Run Gradle Build
-      run: ./gradlew makeZip
+      run: ./gradlew makeZip --stacktrace --info
 
     - name: Upload generated ZIP
       uses: actions/upload-artifact@v4
