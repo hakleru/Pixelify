@@ -19,6 +19,12 @@ jobs:
         distribution: 'temurin'
         java-version: '11'
 
+    - name: Setup Android SDK and Build Tools
+      uses: android-actions/setup-android@v3
+      with:
+        cmdline-tools-version: '9477386_latest'
+        packages: 'platforms;android-33'
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
